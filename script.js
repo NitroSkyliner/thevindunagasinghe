@@ -14,11 +14,13 @@ window.addEventListener('wheel', (event) => {
     navigateCards(event.deltaY > 0 ? 1 : -1);
 });
 
+
 function navigateCards(direction) {
     const nextIndex = Math.min(Math.max(currentIndex + direction, 0), cards.length - 1);
 
     if (nextIndex !== currentIndex) {
         scrollToSection(nextIndex);
+        currentIndex = nextIndex;
     }
 }
 
@@ -42,8 +44,8 @@ navLinks.forEach((link, index) => {
 });
 
 function scrollToSection(index) {
-    cards.forEach((card, i) => {
-        card.style.transition = "transform 0.8s ease-in-out";
+    cards.forEach((card, i ) => {
+        card.style.transition = "transform 0.7s ease-in-out";
         card.style.transform = `translateY(${(i - index) * 100}%)`;
     });
     currentIndex = index;
