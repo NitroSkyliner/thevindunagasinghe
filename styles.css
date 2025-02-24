@@ -1,0 +1,572 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #494953e6;
+    padding: 10px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow */
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold; /* Made text bold */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #EDF2F6;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF5656;
+}
+
+/* Sections */
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Background colors for each section */
+#home {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #FF5656;
+    color: #EDF2F6;
+    z-index: 2;
+}
+
+
+/* Section 2 Styling */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #494953;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 0;
+    
+}
+
+/* Container for Image & Rotating Shape */
+.about-image-container {
+    position: relative;
+    width: 250px; /* Adjust based on image size */
+    height: 250px;
+}
+
+
+
+/* Rotating Background Shape */
+.rotating-shape {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* Slightly larger than image */
+    height: auto;
+    animation: rotateShape 8s linear infinite;
+    z-index: 0; /* Keeps it behind the main image */
+}
+
+.stars {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    animation: rotateShape 8s linear infinite;
+    z-index: 0; /* Keeps it behind the main image */
+}
+
+.about-description {
+    margin-left: 350px;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 600px;
+}
+/* Main Image */
+.about-image {
+    position: relative;
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: auto;
+    z-index: 0; /* Ensures it's above the rotating shape */
+}
+
+/* Text Content */
+.about-text {
+    margin-left: 350px;
+    font-size: 22px;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+/* Interest Box */
+.interest-box {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 2px dashed black;
+    font-size: 18px;
+}
+
+/* Rotation Animation */
+@keyframes rotateShape {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6A7EFC;
+    color: white;
+}
+
+/* Full-Page Styling for Projects */
+#projects-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    width: 100vw;
+}
+
+/* Project Container - Increase Spacing */
+.project-container {
+    display: flex;
+    justify-content: space-around; /* Ensures full-width usage */
+    width: 90%; /* Adjusts to fit screen width better */
+    max-width: 1400px;
+}
+
+/* Individual Project Sections - Reduce Size */
+.project {
+    width: 35%; /* Reduced from 45% to make them smaller */
+    padding: 30px; /* Reduced padding to shrink size */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px; /* Keeps the rounded corners */
+    position: relative; 
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.project h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.project p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.project-1 {
+    background-image.dark {
+        filter: brightness(20%); /* Adjust percentage (Lower = Darker) */
+    }
+    background-image: url('Images/Final\ LogoArtboard\ 1@0.75x-8.png'); /* Replace with actual logo */
+    height: 400px;
+    width: 300px;
+    margin-right: 100px;
+    color: white;
+
+}
+
+.project-2 {
+    background-image.dark {
+        filter: brightness(20%); /* Adjust percentage (Lower = Darker) */
+    }
+    background-image: url('Images/velarox.png') ; /* Replace with actual logo */
+    height: 400px;
+    width: 300px;
+    margin-left: 100px;
+}
+
+/* Hover Effect */
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    width: 100%;  /* Ensure it fits */
+    height: 100%; /* Adjust as needed */
+    object-fit: cover; /* Keep proportions */
+    filter: brightness(50%); /* Adjust percentage (Lower = Darker) */
+}
+
+
+.project-image-velarox {
+    max-width: 30%;
+    height: auto;
+    position: relative;
+}
+
+/* Links */
+.project a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #6A7EFC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+#resources {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 0;
+    background-color: #EDF2F6;
+    color: #6A7EFC;
+}
+
+
+.resource-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.resource {
+    width: 35%;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+    border-radius: 12px;
+    position: relative; 
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Overall styling for Resources Section */
+
+
+/* Overall styling for Connect Section */
+#connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 0;
+    background-color: #FF5656; /* Light background for contrast */
+    color: #EDF2F6;
+}
+
+/* Title Styling */
+.resources-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Split Container */
+.resources-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust width */
+    max-width: 1200px;
+}
+
+/* Individual Resource Card */
+.resource-card1, .resource-card2 {
+    width: 50%; /* Half screen width */
+    padding: 30px;
+    margin: 10px;
+    background-color: #494953; /* Dark background */
+    color: #EDF2F6;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.resource-card:hover {
+    transform: scale(1.05);
+}
+
+/* Title inside the card */
+.resource-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Description text */
+.resource-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Link Styling */
+.resource-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6A7EFC; /* Soft blue color */
+    color: white;
+    text-decoration: none;
+    text-emphasis-color: #6A7EFC;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.resource-link:hover {
+    background-color: #4A5FCC; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resources-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Home Section Specific Styles */
+
+.profile-image {
+    width: 400px;
+    height: auto;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+
+}
+
+.iam {
+    font-size: 24px;
+    margin: 0;
+}
+
+.name {
+    position: relative;
+    font-size: 90px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.nickname {
+    font-size: 20px;
+}
+
+/* Image */
+
+
+
+.intro-image img {
+    width: 1350px;
+    height: auto;
+}
+
+/* Scroll Indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 18px;
+    animation: bounce 1.5s infinite;
+}
+
+/* Scroll Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+
+
+
+
+/* Connect section */
+
+
+.social-icon {
+    width: 65px;
+    height: 65px;
+    margin: 15px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    opacity: 1;
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+/* General Styling */
+
+/* Base style for all icons */
+.social-icon {
+    width: 65px;
+    height: 65px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    opacity: 1; /* Fully visible initially */
+}
+
+/* Individual hover animations */
+.instagram:hover {
+    transform: scale(1.25) rotate(5deg);
+    opacity: 0.9;
+    box-shadow: 0px 12px 30px rgba(255, 48, 108, 0.4); /* Instagram pinkish shadow */
+}
+
+.linkedin:hover {
+    transform: scale(1.25);
+    opacity: 0.9;
+    box-shadow: 0px 12px 30px rgba(255, 48, 108, 0.4); /* LinkedIn blue shadow */
+}
+
+.github:hover {
+    transform: scale(1.25);
+    opacity: 0.9;
+    box-shadow: 0px 12px 30px rgba(255, 48, 108, 0.4); /* GitHub dark shadow */
+}
+
+.twitter:hover {
+    transform: scale(1.25);
+    opacity: 0.9;
+    box-shadow: 0px 12px 30px rgba(255, 48, 108, 0.4); /* X (Twitter) black shadow */
+}
+
+.discord:hover {
+    transform: scale(1.25) rotate(-5deg);
+    opacity: 0.9;
+    box-shadow: 0px 12px 30px rgba(255, 48, 108, 0.4); /* Discord purple shadow */
+}
+
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.connect-container h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.connect-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.connect-container p {
+    font-size: 18px;
+    max-width: 600px;
+
+}
+
+.connect-description {
+    font-size: 18px;
+    max-width: 600px;
+    font-weight: 600;
+}
+/* Flexbox for Icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spacing between icons */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 10px;
+}
+
+/* Icon Styling */
+.icons a img {
+    width: 50px; /* Default size */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.icons a:hover img {
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .icons {
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+    .icons a img {
+        width: 40px; /* Smaller icons for mobile */
+    }
+}

@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+const navbar = document.getElementById("navbar");
+
+
+
+
+// Update navbar color based on section
+function updateNavbarColor(index) {
+    const colors = ["#494953", "#EDF2F6", "#6A7EFC", "#494953", "#FF5656"];
+    navbar.style.backgroundColor = colors[index];
+}
+
+// Animate navbar into view
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        navbar.style.top = "10px"; // Bring navbar into view
+    } else {
+        navbar.style.top = "-60px"; // Hide navbar
+    }
+});
+
+// Initialize navbar position and style
+navbar.style.top = "-60px";
+navbar.style.transition = "top 0.5s ease, background-color 0.5s ease";
+=======
+const navbar = document.getElementById("navbar");
+
+
+
+
+// Update navbar color based on section
+function updateNavbarColor(index) {
+    const colors = ["#494953", "#EDF2F6", "#6A7EFC", "#494953", "#FF5656"];
+    navbar.style.backgroundColor = colors[index];
+}
+
+// Animate navbar into view
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        navbar.style.top = "10px"; // Bring navbar into view
+    } else {
+        navbar.style.top = "-60px"; // Hide navbar
+    }
+});
+
+// Initialize navbar position and style
+navbar.style.top = "-60px";
+navbar.style.transition = "top 0.5s ease, background-color 0.5s ease";
+>>>>>>> 5fbb579 (Initial commit - linking to GitHub repository)
